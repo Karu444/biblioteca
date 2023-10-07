@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Libreria Campuslands</h1>
+    <div>
+        <button>Ordenar</button>
+        <button onclick="show(`#add`,`#books`)">Agregar</button>
+    </div>
+    <section id="add">
+        <h2>Agregar Libro</h2>
+        <div class="add_book">
+            <div class="info_book">
+                <label for="">Titulo</label>
+                <input type="text" id="title">
+                <p>Pega el link de la imagen de portada del libro</p>
+                <label for="">Portada</label>
+                <input type="text" id="front" onchange="change_back(this.value)">
+                <label for="">Autor</label>
+                <input type="text" id="author">
+                <label for="">Genero</label>
+                <input type="text" id="genre">
+                <label for="">Año de publicacion</label>
+                <input type="text" id="year">
+            </div>
+            <div class="img_book">
+                <img src="" alt="portada" id="img_add">
+            </div>
+        </div>
+        
+        <button onclick="add_book()">Agregar</button>
+        <button onclick="show(`#books`,`#add`)">Volver atras</button>
+        
+    </section>
+
+    <section id="books">
+        <div class="contain_books">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
